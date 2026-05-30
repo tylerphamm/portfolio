@@ -1,0 +1,52 @@
+# Tien Pham Dinh (Tyler Pham)
+
+> AI Engineer based in Hanoi, Vietnam, with 2+ years of experience building agentic AI systems, computer-vision pipelines, and the MLOps infrastructure that ships them to production. Currently building AI agents for robots at Vin Dynamics.
+
+## About
+
+Tien Pham Dinh (also known as Tyler Pham) is an AI Engineer who turns research into reliable production systems — from multi-agent platforms and RAG systems to face-recognition pipelines and real-time video analytics. He cares less about benchmarks on paper and more about systems that work when real users show up.
+
+- Role: AI Engineer
+- Location: Hanoi, Vietnam
+- Languages: Vietnamese (native), English, Korean
+- Open to: Freelance and remote AI engineering work (agents, computer vision, MLOps)
+
+## Skills
+
+- LLMs & Agents: LangChain, LangGraph, LangSmith, vLLM, LiteLLM, RAG, multi-agent systems, GoClaw
+- Computer Vision: YOLO, NVIDIA DeepStream, RetinaFace, ArcFace, CLIP, ONNX, TensorRT
+- MLOps & Cloud: GCP, Kubernetes, Docker, Terraform, GitLab CI/CD, Prometheus, Grafana
+- Data & Backend: Python, FastAPI, Kafka, Spark, PostgreSQL, Milvus, Qdrant, Redis
+
+## Experience
+
+- Vin Dynamics — AI Engineer (Jun 2026 – now): Building AI agent systems for robots — integrating LLMs and multi-agent architectures for autonomous perception, reasoning, and task execution.
+- Savvycom Solution JSC — AI Team Lead / AI Engineer (Apr 2025 – Jun 2026)
+- 1BitLab Technology — AI Engineer (Sep 2024 – Mar 2025): Built RAG systems with LangChain, Streamlit and FastAPI on GCP; OCR pipelines for document understanding.
+
+## Selected projects
+
+- Savvy Agent: Enterprise assistant on LangChain & LangGraph — policy Q&A via RAG, business reports, timesheet integration.
+- eKYC Pipeline: Face verification using RetinaFace detection, MiniFASNet liveness/anti-spoofing, and ArcFace recognition.
+- Real-time Video Analytics: NVIDIA DeepStream pipelines over RTSP with YOLO detection and CLIP semantic video search.
+- Agent SDLC: Multi-agent system where each agent owns a software-lifecycle role, built on the GoClaw framework.
+- LLMOps — Legal QA: Production MLOps on GKE with CI/CD, ELK + Prometheus/Grafana, Terraform IaC, LiteLLM routing, Redis semantic caching.
+
+## Achievements
+
+- Champion — Vibe Code Hackathon @ Savvycom
+- Top 10 — HCMC AI Challenge
+- 1st Prize — VFOSSA Open Source Contest
+- Consolation — National Student Informatics Olympiad
+
+## Education
+
+- Hanoi University of Industry
+
+## Links
+
+- Portfolio: https://tylerpham.dev/
+- GitHub: https://github.com/0121ienT
+- LinkedIn: https://www.linkedin.com/in/phamdt203/
+- Email: phamdt203@gmail.com
+- Résumé (PDF): https://tylerpham.dev/PhamDinhTien_AI_Engineer.pdf
