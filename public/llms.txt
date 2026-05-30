@@ -9,7 +9,7 @@ Tien Pham Dinh (also known as Tyler Pham) is an AI Engineer who turns research i
 - Role: AI Engineer
 - Location: Hanoi, Vietnam
 - Languages: Vietnamese (native), English, Korean
-- Open to: Freelance and remote AI engineering work (agents, computer vision, MLOps)
+- Open to: Freelance, consulting, and remote AI engineering work (agents, computer vision, MLOps)
 
 ## Skills
 

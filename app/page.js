@@ -42,7 +42,7 @@ export default function Home() {
                 </Link>
               </div>
               <div className="avail">
-                <span className="dot"></span> Open to freelance & remote work
+                <span className="dot"></span> Open to freelance, consulting & remote work
               </div>
             </div>
             <div className="scrollcue">
@@ -116,7 +116,7 @@ export default function Home() {
             <h2>Have a problem worth solving?</h2>
             <p>
               I help teams ship agentic AI, computer-vision, and MLOps systems that survive real
-              users — available for freelance and remote projects.
+              users — available for freelance, consulting, and remote work.
             </p>
             <div className="cta">
               <Link className="btn primary" href="/contact">

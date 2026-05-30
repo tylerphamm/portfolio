@@ -3,7 +3,7 @@ import CopyEmail from '@/components/CopyEmail';
 export const metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Tien Pham Dinh (Tyler Pham) — AI Engineer in Hanoi, Vietnam. Open to freelance and remote AI engineering work. Usually replies within a day.',
+    'Get in touch with Tien Pham Dinh (Tyler Pham) — AI Engineer in Hanoi, Vietnam. Open to freelance, consulting, and remote AI engineering work. Usually replies within a day.',
   alternates: { canonical: '/contact' },
 };
 
@@ -18,7 +18,7 @@ export default function Contact() {
           <div className="ey">Contact</div>
           <h1>Let&apos;s build something great.</h1>
           <p className="lead">
-            I&apos;m open to freelance and remote AI engineering work. Tell me what
+            I&apos;m open to freelance, consulting, and remote AI engineering work. Tell me what
             you&apos;re working on — I usually reply within a day.
           </p>
         </div>
@@ -90,7 +90,7 @@ export default function Contact() {
               </div>
               <div className="fact">
                 <span>Open to</span>
-                <span>Freelance · Remote</span>
+                <span>Freelance · Consulting · Remote</span>
               </div>
               <div className="fact">
                 <span>Based in</span>
@@ -110,7 +110,7 @@ export default function Contact() {
               </div>
             </div>
             <p className="panel-note">
-              <span className="dot"></span> Currently available for freelance & remote work
+              <span className="dot"></span> Currently available for freelance & consulting (remote)
             </p>
           </aside>
         </section>

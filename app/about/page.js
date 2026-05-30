@@ -249,7 +249,7 @@ export default function About() {
         <div className="cta-band reveal">
           <span className="ey">Let&apos;s work together</span>
           <h2>Want to build something?</h2>
-          <p>Open to freelance and remote AI engineering work.</p>
+          <p>Open to freelance, consulting, and remote AI engineering work.</p>
           <div className="cta">
             <Link className="btn primary" href="/contact">
               Get in touch
