@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getAll } from '@/lib/content';
+import { CtaBand } from '@/components/Blocks';
 
 export const metadata = {
   title: 'Work',
@@ -22,30 +23,31 @@ export default function Work() {
           </p>
         </div>
 
-        <section>
+        <section className="sec">
           <div className="work-list">
             {items.map((s, i) => (
               <Link key={s.slug} href={`/solutions/${s.slug}`} className="work-row reveal">
-                <span className="rnum">{String(i + 1).padStart(2, '0')}</span>
+                <span className="label n">{String(i + 1).padStart(2, '0')}</span>
                 <div>
-                  <span className="rtitle">
-                    {s.title}
-                    <span className="arr">↗</span>
-                  </span>
-                  <p className="rdesc">{s.summary}</p>
+                  <span className="label">{s.category}</span>
+                  <h3>{s.title}</h3>
+                  <p>{s.summary}</p>
                 </div>
-                <div className="rmeta">
+                <div className="tags">
                   {(s.stack || []).slice(0, 3).map((t) => (
                     <span key={t} className="tag">
                       {t}
                     </span>
                   ))}
                 </div>
+                <span className="arr" aria-hidden="true">
+                  ↗
+                </span>
               </Link>
             ))}
           </div>
           <a
-            className="work-cta"
+            className="more work-cta"
             href="https://github.com/0121ienT"
             target="_blank"
             rel="noopener"
@@ -53,22 +55,19 @@ export default function Work() {
             All projects on GitHub ↗
           </a>
         </section>
-      </div>
 
-      <div className="wrap">
-        <div className="cta-band reveal">
-          <span className="ey">Let&apos;s work together</span>
-          <h2>Have a problem worth solving?</h2>
-          <p>Open to freelance, consulting, and remote AI engineering work.</p>
-          <div className="cta">
-            <Link className="btn primary" href="/contact">
-              Get in touch
-            </Link>
-            <Link className="btn ghost" href="/solutions">
-              View solutions
-            </Link>
-          </div>
-        </div>
+        <CtaBand
+          eyebrow="Let's work together"
+          title="Have a problem worth solving?"
+          text="Open to freelance, consulting, and remote AI engineering work."
+        >
+          <Link className="btn primary" href="/contact">
+            Get in touch <span className="ar">→</span>
+          </Link>
+          <Link className="btn ghost" href="/solutions">
+            View solutions
+          </Link>
+        </CtaBand>
       </div>
     </main>
   );

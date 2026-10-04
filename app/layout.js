@@ -62,7 +62,7 @@ export const metadata = {
   verification: { google: 'QqkkV5DPwm69q-U3xazVkoK2gHqnUsxOl_V61u2npcI' },
 };
 
-export const viewport = { themeColor: '#0b0b0c' };
+export const viewport = { themeColor: '#0e0e10' };
 
 const JSONLD = {
   '@context': 'https://schema.org',
@@ -122,20 +122,23 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD) }}
         />
+        <noscript>
+          <style>{`.reveal,.has-loader *{opacity:1!important;transform:none!important;animation:none!important}`}</style>
+        </noscript>
         <SiteFX />
         <Nav />
         {children}
-        <footer>
-          <div className="wrap fwrap">
-            <span className="mono">© 2026 Tien Pham Dinh</span>
-            <nav className="fnav">
+        <footer className="site-footer">
+          <div className="wrap in">
+            <span>© 2026 Tien Pham Dinh</span>
+            <nav aria-label="Footer">
               <Link href="/about">About</Link>
               <Link href="/work">Work</Link>
               <Link href="/solutions">Solutions</Link>
               <Link href="/blog">Blog</Link>
               <Link href="/contact">Contact</Link>
             </nav>
-            <span className="mono">Built in Hanoi · ✦</span>
+            <span>Built in Hanoi · ✦</span>
           </div>
         </footer>
         <Analytics />

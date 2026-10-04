@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SectionHead, CtaBand } from '@/components/Blocks';
 
 export const metadata = {
   title: 'About',
@@ -14,13 +15,9 @@ export default function About() {
         <div className="page-hero">
           <div className="ey">About</div>
           <h1>I build systems that work when real users show up.</h1>
-          <p className="lead">
-            AI Engineer with 2+ years turning research into reliable products — from multi-agent
-            platforms and RAG systems to face-recognition pipelines and real-time video analytics.
-          </p>
         </div>
 
-        <section>
+        <section className="sec">
           <div className="about-grid">
             <div className="reveal about-text">
               <p>
@@ -84,11 +81,8 @@ export default function About() {
           </div>
         </section>
 
-        <section>
-          <div className="sec-head reveal">
-            <span className="num">(01)</span>
-            <h2>Capabilities</h2>
-          </div>
+        <section className="sec">
+          <SectionHead num="01" title="Capabilities" />
           <div className="cap-grid">
             <div className="cap reveal">
               <h3>
@@ -147,11 +141,8 @@ export default function About() {
           </div>
         </section>
 
-        <section>
-          <div className="sec-head reveal">
-            <span className="num">(02)</span>
-            <h2>Experience</h2>
-          </div>
+        <section className="sec">
+          <SectionHead num="02" title="Experience" />
           <div className="exp-row reveal">
             <div className="when">JUN 2026 — NOW</div>
             <div>
@@ -187,11 +178,8 @@ export default function About() {
           </div>
         </section>
 
-        <section>
-          <div className="sec-head reveal">
-            <span className="num">(03)</span>
-            <h2>Awards</h2>
-          </div>
+        <section className="sec">
+          <SectionHead num="03" title="Awards" />
           <div className="awards">
             <div className="award reveal">
               <div>
@@ -246,19 +234,18 @@ export default function About() {
       </div>
 
       <div className="wrap">
-        <div className="cta-band reveal">
-          <span className="ey">Let&apos;s work together</span>
-          <h2>Want to build something?</h2>
-          <p>Open to freelance, consulting, and remote AI engineering work.</p>
-          <div className="cta">
-            <Link className="btn primary" href="/contact">
-              Get in touch
-            </Link>
-            <a className="btn ghost" href="/PhamDinhTien_AI_Engineer.pdf" download>
-              Download CV ↓
-            </a>
-          </div>
-        </div>
+        <CtaBand
+          eyebrow="Let's work together"
+          title="Want to build something?"
+          text="Open to freelance, consulting, and remote AI engineering work."
+        >
+          <Link className="btn primary" href="/contact">
+            Get in touch <span className="ar">→</span>
+          </Link>
+          <a className="btn ghost" href="/PhamDinhTien_AI_Engineer.pdf" download>
+            Download CV ↓
+          </a>
+        </CtaBand>
       </div>
     </main>
   );

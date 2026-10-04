@@ -33,7 +33,7 @@ export default function Contact() {
                   <span className="ml">Email</span>
                   <span className="mv">phamdt203@gmail.com</span>
                 </span>
-                <span className="marr">↗</span>
+                <span className="arr" aria-hidden="true">↗</span>
               </a>
               <a
                 className="method"
@@ -47,7 +47,7 @@ export default function Contact() {
                   <span className="ml">LinkedIn</span>
                   <span className="mv">/in/phamdt203</span>
                 </span>
-                <span className="marr">↗</span>
+                <span className="arr" aria-hidden="true">↗</span>
               </a>
               <a
                 className="method"
@@ -61,7 +61,7 @@ export default function Contact() {
                   <span className="ml">GitHub</span>
                   <span className="mv">@0121ienT</span>
                 </span>
-                <span className="marr">↗</span>
+                <span className="arr" aria-hidden="true">↗</span>
               </a>
               <a
                 className="method"
@@ -74,11 +74,8 @@ export default function Contact() {
                   <span className="ml">Résumé</span>
                   <span className="mv">Download CV (PDF)</span>
                 </span>
-                <span className="marr">↓</span>
+                <span className="arr" aria-hidden="true">↓</span>
               </a>
-            </div>
-            <div style={{ marginTop: 18 }}>
-              <CopyEmail />
             </div>
           </div>
 
@@ -117,8 +114,8 @@ export default function Contact() {
       </div>
 
       <div className="wrap">
-        <section className="contact">
-          <span className="mono">Prefer email?</span>
+        <section className="contact reveal">
+          <span className="label">Prefer email?</span>
           <a className="big" href={MAILTO}>
             Say <em>hello</em> →
           </a>

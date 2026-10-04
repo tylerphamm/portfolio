@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { SolutionCard, CtaBand } from '@/components/Blocks';
 import { getAll } from '@/lib/content';
 
 export const metadata = {
@@ -22,50 +23,32 @@ export default function Solutions() {
           </p>
         </div>
 
-        <section>
+        <section className="sec">
           {items.length ? (
             <div className="cards">
               {items.map((s) => (
-                <Link key={s.slug} href={`/solutions/${s.slug}`} className="card reveal">
-                  <span className="ccat">{s.category}</span>
-                  <span className="ctitle">
-                    {s.title}
-                    <span className="arr">↗</span>
-                  </span>
-                  <span className="csum">{s.summary}</span>
-                  <span className="ctags">
-                    {(s.stack || []).slice(0, 5).map((t) => (
-                      <span key={t} className="tag">
-                        {t}
-                      </span>
-                    ))}
-                  </span>
-                </Link>
+                <SolutionCard key={s.slug} s={s} maxTags={5} />
               ))}
             </div>
           ) : (
-            <div className="empty reveal">Solutions coming soon.</div>
+            <div className="empty reveal">
+              <h3>Solutions coming soon</h3>
+            </div>
           )}
         </section>
-      </div>
 
-      <div className="wrap">
-        <div className="cta-band reveal">
-          <span className="ey">Don&apos;t see your exact need?</span>
-          <h2>Let&apos;s scope a custom solution</h2>
-          <p>
-            Tell me your problem and constraints — I&apos;ll propose an approach, timeline, and what
-            &quot;done&quot; looks like.
-          </p>
-          <div className="cta">
-            <Link className="btn primary" href="/contact">
-              Get a quote
-            </Link>
-            <a className="btn ghost" href="/PhamDinhTien_AI_Engineer.pdf" download>
-              Download CV ↓
-            </a>
-          </div>
-        </div>
+        <CtaBand
+          eyebrow="Don't see your exact need?"
+          title="Let's scope a custom solution"
+          text={`Tell me your problem and constraints — I'll propose an approach, timeline, and what "done" looks like.`}
+        >
+          <Link className="btn primary" href="/contact">
+            Get a quote <span className="ar">→</span>
+          </Link>
+          <a className="btn ghost" href="/PhamDinhTien_AI_Engineer.pdf" download>
+            Download CV ↓
+          </a>
+        </CtaBand>
       </div>
     </main>
   );

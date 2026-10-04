@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Preloader from '@/components/Preloader';
-import { getAll, formatDate } from '@/lib/content';
+import { SolutionCard, PostRow, SectionHead, CtaBand } from '@/components/Blocks';
+import { getAll } from '@/lib/content';
 
 export default function Home() {
   const solutions = getAll('solutions').slice(0, 4);
@@ -9,124 +10,113 @@ export default function Home() {
   return (
     <>
       <Preloader />
-      <main className="page">
+      <main className="page has-loader">
         <div className="wrap" id="top">
-          <header>
-            <div className="hero-inner">
-              <span className="kicker">AI Engineer — Hanoi, Vietnam</span>
-              <h1 className="name">
-                <span className="w accent">
-                  <i>Tien</i>
+          <section className="hero">
+            <div className="hero-a">
+              <div>
+                <span className="label kicker in-1">
+                  <span className="dot"></span>AI Engineer — Hanoi, Vietnam
                 </span>
-                <span className="w">
-                  <i>Pham</i>
-                </span>
-                <span className="w">
-                  <i>Dinh</i>
-                </span>
-              </h1>
-              <div className="alias">
-                also known as <span>Tyler Pham</span>
-              </div>
-              <div className="hr-line"></div>
-              <p className="tag">
-                I build AI agents, computer-vision systems, and the MLOps infrastructure that ships
-                them to production.
-              </p>
-              <div className="cta">
-                <Link className="btn primary" href="/solutions">
-                  View solutions
-                </Link>
-                <Link className="btn ghost" href="/work">
-                  Selected work
-                </Link>
-              </div>
-              <div className="avail">
-                <span className="dot"></span> Open to freelance, consulting & remote work
-              </div>
-            </div>
-            <div className="scrollcue">
-              SCROLL<span className="ln"></span>
-            </div>
-          </header>
-        </div>
-
-        <div className="wrap">
-          <section>
-            <div className="sec-head reveal">
-              <span className="num">(01)</span>
-              <h2>Solutions I can build for you</h2>
-            </div>
-            <div className="cards">
-              {solutions.map((s) => (
-                <Link key={s.slug} href={`/solutions/${s.slug}`} className="card reveal">
-                  <span className="ccat">{s.category}</span>
-                  <span className="ctitle">
-                    {s.title}
-                    <span className="arr">↗</span>
+                <h1 className="name">
+                  <span className="w accent">
+                    <i>Tien</i>
                   </span>
-                  <span className="csum">{s.summary}</span>
-                  <span className="ctags">
-                    {(s.stack || []).slice(0, 4).map((t) => (
-                      <span key={t} className="tag">
-                        {t}
-                      </span>
-                    ))}
+                  <span className="w">
+                    <i>Pham</i>
                   </span>
-                </Link>
-              ))}
+                  <span className="w">
+                    <i>Dinh</i>
+                  </span>
+                </h1>
+                <div className="alias in-2">
+                  also known as <span>Tyler Pham</span>
+                </div>
+                <p className="lede in-3">
+                  I build <strong>AI agents</strong>, <strong>computer-vision systems</strong>, and
+                  the <strong>MLOps infrastructure</strong> that ships them to production.
+                </p>
+                <div className="cta in-4">
+                  <Link className="btn primary" href="/solutions">
+                    View solutions <span className="ar">→</span>
+                  </Link>
+                  <Link className="btn ghost" href="/work">
+                    Selected work
+                  </Link>
+                </div>
+                <div className="avail in-5">
+                  <span className="dot"></span>Open to freelance, consulting &amp; remote work
+                </div>
+              </div>
+              <div className="proof in-5">
+                <div className="row">
+                  <span className="label">Currently</span>
+                  <span>AI Engineer @ Vin Dynamics</span>
+                </div>
+                <div className="row">
+                  <span className="label">Focus</span>
+                  <span>Agentic AI · Computer Vision · Robotics</span>
+                </div>
+                <div className="row">
+                  <span className="label">Based in</span>
+                  <span>Hanoi, Vietnam</span>
+                </div>
+                <div className="row">
+                  <span className="label">Languages</span>
+                  <span>VI · EN · KO</span>
+                </div>
+              </div>
             </div>
-            <Link className="section-link" href="/solutions">
-              All solutions →
-            </Link>
           </section>
 
-          <section>
-            <div className="sec-head reveal">
-              <span className="num">(02)</span>
-              <h2>From the blog</h2>
+          <section className="sec">
+            <SectionHead
+              num="01"
+              label="Solutions"
+              title="Solutions I can build for you"
+              href="/solutions"
+              linkText="All solutions"
+            />
+            <div className="cards">
+              {solutions.map((s) => (
+                <SolutionCard key={s.slug} s={s} />
+              ))}
             </div>
+          </section>
+
+          <section className="sec">
+            <SectionHead
+              num="02"
+              label="Writing"
+              title="From the blog"
+              href="/blog"
+              linkText="Read the blog"
+            />
             {posts.length ? (
               <div className="post-list">
                 {posts.map((p) => (
-                  <Link key={p.slug} href={`/blog/${p.slug}`} className="post-row reveal">
-                    <div className="pdate">{formatDate(p.date)}</div>
-                    <div>
-                      <span className="ptitle">
-                        {p.title}
-                        <span className="arr">↗</span>
-                      </span>
-                      <p className="pdesc">{p.summary}</p>
-                    </div>
-                  </Link>
+                  <PostRow key={p.slug} p={p} />
                 ))}
               </div>
             ) : (
-              <div className="empty reveal">Posts coming soon.</div>
+              <div className="empty reveal">
+                <h3>Posts coming soon</h3>
+              </div>
             )}
-            <Link className="section-link" href="/blog">
-              Read the blog →
-            </Link>
           </section>
-        </div>
 
-        <div className="wrap">
-          <div className="cta-band reveal">
-            <span className="ey">Let&apos;s work together</span>
-            <h2>Have a problem worth solving?</h2>
-            <p>
-              I help teams ship agentic AI, computer-vision, and MLOps systems that survive real
-              users — available for freelance, consulting, and remote work.
-            </p>
-            <div className="cta">
-              <Link className="btn primary" href="/contact">
-                Get in touch
-              </Link>
-              <a className="btn ghost" href="/PhamDinhTien_AI_Engineer.pdf" download>
-                Download CV ↓
-              </a>
-            </div>
-          </div>
+          <CtaBand
+            eyebrow="Let's work together"
+            title="Have a problem worth solving?"
+            text="I help teams ship agentic AI, computer-vision, and MLOps systems that survive real users — available for freelance, consulting, and remote work."
+          >
+            <Link className="btn primary" href="/contact">
+              Get in touch <span className="ar">→</span>
+            </Link>
+            <a className="btn ghost" href="/PhamDinhTien_AI_Engineer.pdf" download>
+              Download CV ↓
+            </a>
+          </CtaBand>
         </div>
       </main>
     </>

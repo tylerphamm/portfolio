@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { getAll, formatDate } from '@/lib/content';
+import { PostRow } from '@/components/Blocks';
+import { getAll } from '@/lib/content';
 
 export const metadata = {
   title: 'Blog',
@@ -21,33 +21,17 @@ export default function Blog() {
           </p>
         </div>
 
-        <section>
+        <section className="sec">
           {posts.length ? (
             <div className="post-list">
               {posts.map((p) => (
-                <Link key={p.slug} href={`/blog/${p.slug}`} className="post-row reveal">
-                  <div className="pdate">{formatDate(p.date)}</div>
-                  <div>
-                    <span className="ptitle">
-                      {p.title}
-                      <span className="arr">↗</span>
-                    </span>
-                    <p className="pdesc">{p.summary}</p>
-                    {p.tags && p.tags.length > 0 && (
-                      <div className="ptags">
-                        {p.tags.map((t) => (
-                          <span key={t} className="tag">
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </Link>
+                <PostRow key={p.slug} p={p} showTags />
               ))}
             </div>
           ) : (
-            <div className="empty reveal">Posts coming soon.</div>
+            <div className="empty reveal">
+              <h3>Posts coming soon</h3>
+            </div>
           )}
         </section>
       </div>
