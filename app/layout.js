@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, JetBrains_Mono } from 'next/font/google';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import SiteFX from '@/components/SiteFX';
+import { Analytics } from '@vercel/analytics/react';
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -137,6 +138,7 @@ export default function RootLayout({ children }) {
             <span className="mono">Built in Hanoi · ✦</span>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
