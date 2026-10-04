@@ -55,7 +55,7 @@ export default function Home() {
                 </div>
                 <div className="row">
                   <span className="label">Focus</span>
-                  <span>Agentic AI · Computer Vision · Robotics</span>
+                  <span>Agentic AI · Computer Vision · Robotics · MLOps</span>
                 </div>
                 <div className="row">
                   <span className="label">Based in</span>
