@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import avatar from '@/public/avatar.jpg';
 import { SectionHead, CtaBand } from '@/components/Blocks';
 
 export const metadata = {
@@ -34,16 +36,14 @@ export default function About() {
                 evaluation.
               </p>
             </div>
-            <div className="about-right reveal">
+            <div className="about-right enter">
               <div className="portrait">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/avatar.jpg"
+                <Image
+                  src={avatar}
                   alt="Portrait of Tien Pham Dinh"
-                  width="680"
-                  height="680"
-                  loading="lazy"
-                  decoding="async"
+                  priority
+                  placeholder="blur"
+                  sizes="(max-width: 820px) 260px, 320px"
                 />
                 <span className="tagpic">TIEN PHAM DINH</span>
               </div>
