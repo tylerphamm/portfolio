@@ -21,13 +21,17 @@ export default function About() {
           <div className="about-grid">
             <div className="reveal about-text">
               <p>
-                I&apos;m an AI Engineer with 2+ years turning research into{' '}
-                <em>reliable products</em> — from multi-agent platforms and RAG systems to
-                face-recognition pipelines and real-time video analytics.
+                AI Engineer specializing in <em>LLM Agents, RAG, and production AI infrastructure</em>.
               </p>
               <p>
-                Currently building <em>AI agents for robots</em> at Vin Dynamics. I care less about
-                benchmarks on paper, more about systems that work when real users show up.
+                Experienced in designing multi-agent systems, highly available AI services, retrieval
+                pipelines, and cloud-native ML infrastructure using LangGraph, Kubernetes, Redis,
+                PostgreSQL, GCP, and Terraform.
+              </p>
+              <p>
+                Strong focus on building reliable AI products <em>from prototype to production</em>,
+                including Agent optimization, observability, failover, inference optimization, and
+                evaluation.
               </p>
             </div>
             <div className="about-right reveal">
